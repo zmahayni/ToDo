@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/add_cat.css')}}"">
+    {% endblock %}
+        
+    {% block body %}
+        <section class = 'cat'>
+            <div class = "adding_cat">
+                <form class = "cat_form" id = "cat_form" method = "POST" action = "{{ url_for('add_category') }}" autocomplete="off">
+                    <input type = "text" name = "cat_name" id = "cat_name">
+                    <button id = "submit_cat" type = "submit">
+                        Add Category
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- <script src="{{ url_for('static', filename='js/add_cat.js')}}"></script> -->
+    {% endblock %}

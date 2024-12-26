@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/journal.css')}}">
+    {% endblock %}
+    {% block body %}
+        <section class = "nav_bar">
+            <button id="Home"> Home </button>
+            <button id="Calendar"> Calendar </button>
+            <button id="Save"> Save Notes </button>
+        </section>
+
+        <div class="note-editor" contenteditable="true" spellcheck="true" id = "notes"> {{ content | safe }} </div>
+        <script src="{{ url_for('static', filename='js/journal.js')}}"></script>
+    {% endblock %}

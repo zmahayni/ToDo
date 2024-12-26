@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/calendar.css')}}">
+    {% endblock %}
+    {% block body %}
+        <section class = "nav_bar">
+            <button id="Home"> Home </button>
+            <button id="Journal"> Journal </button>
+        </section>
+        <section class = "calendar">
+            <div class="day">
+                <div class="header">
+                    <h3> Monday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Monday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Tuesday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Tuesday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Wednesday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Wednesday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Thursday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Thursday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Friday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Friday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Saturday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Saturday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="day">
+                <div class="header">
+                    <h3> Sunday </h3>
+                </div>
+                <div class="task_list">
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                        {% for task in Sunday %}
+                            <td>{{task.name}}</td>
+                            <td>{{task.date}}</td>
+                            <td>{{task.category.name}}</td>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static', filename='js/calendar.js')}}"></script>
+    {% endblock %}

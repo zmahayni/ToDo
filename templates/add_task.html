@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/add_task.css')}}">
+    {% endblock %}
+    {% block body %}
+        <section class = "adding">
+            <div class = "adding_task">
+                <form class = "add_form" id = "add_form" method = "POST" action = "{{ url_for('add_task') }}" autocomplete="off">
+                    <label> Category </label>
+                    <select name="cat_name" id="cat_name" required>
+                        {% for category in cats %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label> Task </label>
+                    <input type = "text" name = "task_name" id = "task_name" required>
+                    <label> Due Date </label>
+                    <input type = "date" name = "date_name" id = "date_name" required>
+                    <button id = "all_submit" type = "submit">
+                        Add Task
+                    </button>
+                </form>
+            </div>
+        </section>
+    <!-- <script src="add_task.js"></script> -->
+    {% endblock %}
